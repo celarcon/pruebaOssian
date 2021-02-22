@@ -1,0 +1,19 @@
+<div class="col-md-12" *ngIf="image">
+        <div class="">
+            <h3>Título: {{image.title}}</h3>
+        </div>
+        <div class="">
+            <img src="{{ image.url }}" alt="{{ image.title }}"   class="w-100"/>
+            <h3>Categoría:</h3>
+            <h4>{{image.category}}</h4>
+            <h3>Descripción:</h3>
+            <h4>{{image.description}}</h4>
+            <div class="image-buttons mt-2">
+                <a [routerLink]="['/imageEdit', image.idimage]" class="btn btn-warning mr-2">Editar</a>
+                <button class="btn btn-danger mr-2" (click)="deleteImage( image.idimage )">Elimina imagen</button>
+            </div>
+        </div>  
+</div>
+<div class="col-md-12 mt-3" *ngIf="!image">
+    Cargando...
+</div>
