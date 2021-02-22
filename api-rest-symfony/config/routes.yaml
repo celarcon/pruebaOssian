@@ -1,3 +1,34 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+#RUTA IMAGENES#
+images:
+  path: /images
+  controller: App\Controller\ImageController::getImages
+  methods: [GET]
+
+getimage:
+  path: /getimage/{id}
+  controller: App\Controller\ImageController::getImage
+  methods: [GET]
+
+addimage:
+  path: /addimage
+  controller: App\Controller\ImageController::createImage
+  methods: [POST]
+
+putrepoossian:
+  path: /putrepoossian
+  controller: App\Controller\ImageController::putRepoOssian
+  methods: [POST]
+  
+editimage:
+  path: /editimage/{id}
+  controller: App\Controller\ImageController::editImage
+  methods: [PUT] 
+
+deleteimage:
+  path: /deleteimage/{id}
+  controller: App\Controller\ImageController::deleteImage
+  methods: [DELETE]
